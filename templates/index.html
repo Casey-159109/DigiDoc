@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<title>Login Page</title>
@@ -15,5 +15,472 @@
 		<input type="submit" value="Login">
 	</form>
 	<p>Don't have an account? <a href="/register">Register here</a></p>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Say Hello</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+    <br>
+    <form action="greet" method="post">
+        {% for message in get_flashed_messages() %}
+             <p>{{ message }}</p>
+         {% endfor %}
+        <br>
+        <input type="text" name="name_input">
+        <br>
+        <input type="submit" value="GREET" id="greet">
+    </form>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiDoc</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- normalize css -->
+    <link rel = "stylesheet" href = "static/css/normalize.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "static/css/main.css">
+
+	<script>
+		$(document).ready(function() {
+			// Scroll to top on clicking "Home"
+			$("#").click(function() {
+				$("html, body").animate({scrollTop: 0}, "slow");
+			});
+			// // Redirect to chat.html on clicking "About"
+			// $("#chat-link").click(function() {
+			// 	window.location.href = "chat.html";
+			// });
+			// Scroll to bottom on clicking "Contact"
+			$("#about").click(function() {
+				$("html, body").animate({scrollTop: $(document).height()}, "slow");
+			});
+			// Scroll to bottom on clicking "Contact"
+			$("#contact").click(function() {
+				$("html, body").animate({scrollTop: $(document).height()}, "slow");
+			});
+		});
+	</script>
+
+</head>
+<body>
+    
+
+    <!-- header -->
+    <header class = "header bg-blue">
+        <nav class = "navbar bg-blue">
+            <div class = "container flex">
+                <a href = "index.html" class = "navbar-brand">
+					<button type = "button" class="nav-item-title">
+						<text>DigiDoc</text>
+                    </button>
+                </a>
+                <button type = "button" class = "navbar-show-btn">
+                    <img src = "static/images/ham-menu-icon.png">
+                </button>
+
+                <div class = "navbar-collapse bg-white">
+                    <button type = "button" class = "navbar-hide-btn">
+                        <img src = "static/images/close-icon.png">
+                    </button>
+                    <ul class = "navbar-nav">
+                        <li class = "nav-item">
+                            <a href = "#" class = "nav-link">Home</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "#about" class = "nav-link">About</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "/chat" class = "nav-link">Chat</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "#contact" class = "nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    
+                </div> 
+            </div>
+        </nav>
+
+        <div class = "header-inner text-white text-center">
+            <div class = "container grid">
+                <div class = "header-inner-left">
+                    <h1>your most trusted<br> <span>digital health partner</span></h1>
+                    <!-- <p class = "lead">the best match medicine recommendation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; system for you</p> -->
+                    <p class = "text text-md">The best medicine-recommendation tool for the initial first-aid of people at times of need.</p>
+                    <div class = "btn-group">
+                        <a href = "#contact" class = "btn btn-white">Contact Us</a>
+                        <a href = "/chat" class = "btn btn-light-blue">Chat</a>
+                    </div>
+                </div>
+                <div class = "header-inner-right">
+                    <img src = "static/images/header.png">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <main>
+        <!-- about section -->
+        <section id = "about" class = "about py">
+            <div class = "about-inner">
+                <div class = "container grid">
+                    <div class = "about-left text-center">
+                        <div class = "section-head">
+                            <h2>About Us</h2>
+                            <div class = "border-line"></div>
+                        </div>
+                        <p class = "text text-lg">Our project at Jaypee Institute of Information Technology is focused on developing a medicine recommendation system that can help healthcare professionals and patients make informed decisions about their first-aid and basic medication. We have worked hard to create a platform that takes into account various factors such as medical history, symptoms, allergies, and other relevant information to suggest the best possible medication options for each individual in need. The medicine recommendation system uses machine learning algorithms to analyze the condition of the person and provide personalized recommendations that are tailored to each patient's needs. We believe that our medicine recommendation system has the potential to make a significant impact in the healthcare industry and we are excited to continue working on it.</p>
+                    </div>
+                    <!-- <div class = "about-right flex">
+                        <div class = "img"> -->
+                            <img src = "static/images/about-img.png">
+                        <!-- </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <!-- end of about section -->
+
+        <!-- banner one -->
+        <section id = "banner-one" class = "banner-one text-center">
+            <div class = "container text-white">
+                <blockquote class = "lead"><i class = "fas fa-quote-left"></i> When you are young and healthy, it never occurs to you that in a single second your whole life could change. <i class = "fas fa-quote-right"></i></blockquote>
+                <small class = "text text-sm">- Anonim Nano</small>
+            </div>
+        </section>
+        <!-- end of banner one -->
+
+        <!-- services section -->
+        <section id = "services" class = "services py">
+            <div class = "container">
+                <div class = "section-head text-center">
+                    <h2 class = "lead">The Best Doctor gives the least medicines</h2>
+                    <!-- <p class = "text text-lg">A perfect way to show your hospital services</p> -->
+                    <div class = "line-art flex">
+                        <div></div>
+                        <img src = "static/images/4-dots.png">
+                        <div></div>
+                    </div>
+                </div>
+                <div class = "services-inner text-center grid">
+
+                    <article class = "service-item">
+                        <div class = "icon">
+                            <img src = "static/images/service-icon-2.png">
+                        </div>
+                        <h3>Medical Treatment</h3>
+                        <p class = "text text-sm">The medicine recommendation system developed by us has the potential to significantly improve the medical treatment of people. By providing personalized medication recommendations based on each patient's medical history, symptoms, allergies, and other relevant information, the system can help healthcare professionals make more informed decisions about medication.</p>
+                    </article>
+
+                    <article class = "service-item">
+                        <div class = "icon">
+                            <img src = "static/images/service-icon-3.png">
+                        </div>
+                        <h3>Emergency Help</h3>
+                        <p class = "text text-sm">The system also has the potential to play an important role in emergency situations where quick and accurate medication recommendations are crucial for the treatment of patients.It can help in emergency medical needs to provide more efficient and effective care with much more reduced side-effects or reverse drug reactions.</p>
+                    </article>
+
+                    <article class = "service-item">
+                        <div class = "icon">
+                            <img src = "static/images/service-icon-4.png">
+                        </div>
+                        <h3>First Aid</h3>
+                        <p class = "text text-sm">The medicine recommendation system can provide people with instant access to personalized medication, for first-aid, recommendations based on the patient's medical history and current symptoms. This can help them to make more informed decisions about medication in emergency first-aid situations, reducing the risk of adverse drug reactions and improving treatment outcomes for patients.!</p>
+                    </article>
+					
+					<article class = "service-item">
+                        <div class = "icon">
+                            <img src = "static/images/service-icon-1.png">
+                        </div>
+                        <h3>Medical Trainees</h3>
+                        <p class = "text text-sm">During their medical training, students and trainees are often required to practice prescribing medication in simulated scenarios. However, these simulations may not accurately reflect the complexities of real-life medical situations, making it challenging for trainees to develop the skills they need to make accurate medication recommendations.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- end of services section -->
+
+        <!-- banner two section -->
+        <!-- <section id = "banner-two" class = "banner-two text-center">
+            <div class = "container grid">
+                <div class = "banner-two-left">
+                    <img src = "static/images/banner-2-img.png">
+                </div>
+                <div class = "banner-two-right">
+                    <p class = "lead text-white">When you are young and healthy, it never occurs to you that in a single second your whole life could change.</p>
+                    <div class = "btn-group">
+                        <a href = "#" class = "btn btn-white">Learn More</a>
+                        <a href = "#" class = "btn btn-light-blue">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- end of banner two section -->
+
+        <!-- doctors section -->
+        <section id = "doc-panel" class = "doc-panel py">
+            <div class = "container">
+                <div class = "section-head">
+                    <h2>Our Dev Team</h2>
+                </div>
+
+                <div class = "doc-panel-inner grid">
+                    <div class = "doc-panel-item">
+                        <div class = "img flex">
+                            <img src = "static/images/doc-1.png" alt = "doctor image">
+                            <div class = "info text-center bg-blue text-white flex">
+                                <p class = "lead">Abhaydeep Sharma</p>
+                                <p class = "text-lg">Model Training</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "doc-panel-item">
+                        <div class = "img flex">
+                            <img src = "static/images/doc-2.png" alt = "doctor image">
+                            <div class = "info text-center bg-blue text-white flex">
+                                <p class = "lead">Dhruv Vishnoi</p>
+                                <p class = "text-lg">Model integration</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "doc-panel-item">
+                        <div class = "img flex">
+                            <img src = "static/images/doc-3.png" alt = "doctor image">
+                            <div class = "info text-center bg-blue text-white flex">
+                                <p class = "lead">Ujjwal Srivastava</p>
+                                <p class = "text-lg">UI Integration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of doctors section -->
+
+        <!-- package services section -->
+        <!-- <section id = "package-service" class = "package-service py text-center">
+            <div class = "container">
+                <div class = "package-service-head text-white">
+                    <h2>Package Service</h2>
+                    <p class = "text text-lg">Best service package for you</p>
+                </div>
+                <div class = "package-service-inner grid">
+                    <div class = "package-service-item bg-white">
+                        <div class = "icon flex">
+                            <i class = "fas fa-phone fa-2x"></i>
+                        </div>
+                        <h3>Regular Case</h3>
+                        <p class = "text text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, asperiores. Expedita, reiciendis quos beatae at consequatur voluptatibus fuga iste adipisci.</p>
+                        <a href = "#" class = "btn btn-blue">Read More</a>
+                    </div>
+
+                    <div class = "package-service-item bg-white">
+                        <div class = "icon flex">
+                            <i class = "fas fa-calendar-alt fa-2x"></i>
+                        </div>
+                        <h3>Serious Case</h3>
+                        <p class = "text text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, asperiores. Expedita, reiciendis quos beatae at consequatur voluptatibus fuga iste adipisci.</p>
+                        <a href = "#" class = "btn btn-blue">Read More</a>
+                    </div>
+                    
+                    <div class = "package-service-item bg-white">
+                        <div class = "icon flex">
+                            <i class = "fas fa-comments fa-2x"></i>
+                        </div>
+                        <h3>Emergency Case</h3>
+                        <p class = "text text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, asperiores. Expedita, reiciendis quos beatae at consequatur voluptatibus fuga iste adipisci.</p>
+                        <a href = "#" class = "btn btn-blue">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- end of package services section -->
+
+        <!-- posts section -->
+        <!-- <section id = "posts" class = "posts py">
+            <div class = "container">
+                <div class = "section-head">
+                    <h2>Latest Post</h2>
+                </div>
+                <div class = "posts-inner grid">
+                    <article class = "post-item bg-white">
+                        <div class = "img">
+                            <img src = "static/images/post-1.jpg">
+                        </div>
+                        <div class = "content">
+                            <h4>Inspiring stories of person and family centered care during a global pandemic.</h4>
+                            <p class = "text text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor voluptas eius recusandae sunt obcaecati esse facere cumque. Aliquid, cupiditate debitis.</p>
+                            <p class = "text text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quia ipsam, quis iure sed nulla.</p>
+                            <div class = "info flex">
+                                <small class = "text text-sm"><i class = "fas fa-clock"></i> October 27, 2021</small>
+                                <small class = "text text-sm"><i class = "fas fa-comment"></i> 5 comments</small>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class = "post-item bg-white">
+                        <div class = "img">
+                            <img src = "static/images/post-2.jpg">
+                        </div>
+                        <div class = "content">
+                            <h4>Inspiring stories of person and family centered care during a global pandemic.</h4>
+                            <p class = "text text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor voluptas eius recusandae sunt obcaecati esse facere cumque. Aliquid, cupiditate debitis.</p>
+                            <p class = "text text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quia ipsam, quis iure sed nulla.</p>
+                            <div class = "info flex">
+                                <small class = "text text-sm"><i class = "fas fa-clock"></i> October 27, 2021</small>
+                                <small class = "text text-sm"><i class = "fas fa-comment"></i> 5 comments</small>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class = "post-item bg-white">
+                        <div class = "img">
+                            <img src = "static/images/post-3.jpg">
+                        </div>
+                        <div class = "content">
+                            <h4>Inspiring stories of person and family centered care during a global pandemic.</h4>
+                            <p class = "text text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor voluptas eius recusandae sunt obcaecati esse facere cumque. Aliquid, cupiditate debitis.</p>
+                            <p class = "text text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quia ipsam, quis iure sed nulla.</p>
+                            <div class = "info flex">
+                                <small class = "text text-sm"><i class = "fas fa-clock"></i> October 27, 2021</small>
+                                <small class = "text text-sm"><i class = "fas fa-comment"></i> 5 comments</small>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section> -->
+        <!-- end of posts section -->
+
+        <!-- contact section -->
+        <section id = "contact" class = "contact py">
+            <div class = "container grid">
+                <div class = "contact-left">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9735.129655313032!2d77.36830135541149!3d28.6282388774253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce551491b3ce7%3A0x7335d9fcfd4d9db0!2sJAYPEE%20INSTITUTE%20OF%20INFORMATION%20TECHNOLOGY!5e0!3m2!1sen!2sin!4v1683492173488!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" ></iframe>
+                </div>
+                <div class = "contact-right text-white text-center bg-blue">
+                    <div class = "contact-head">
+                        <h3 class = "lead">Contact Us</h3>
+                        <p class = "text text-md">We await for your feedbacks.</p>
+                    </div>
+                    <form  action="/send_email" method="POST">
+                        <div class = "form-element">
+                            <text>20103176@mail.jiit.ac.in</text>
+                        </div>
+						<div class = "form-element">
+                            <text>20103322@mail.jiit.ac.in</text>
+                        </div>
+                        <div class = "form-element">
+							<text>20103332@mail.jiit.ac.in</text>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- end of contact section -->
+    </main>
+
+    <!-- footer  -->
+    <footer id = "footer" class = "footer text-center">
+        <div class = "container">
+            <div class = "footer-inner text-white py grid">
+                <div class = "footer-item">
+                    <h3 class = "footer-head">DigiDoc</h3>
+                    <!-- <div class = "icon">
+						<text class="nav-item-title">DigiDoc</text>
+                    </div> -->
+                    <p class = "text text-md">The most trustable emergency medicine recommendation system.</p>
+                    <address>
+                        Jaypee Institute of Information Technology <br>
+						A-10 Block, Sector - 62, <br>
+                        Noida 201309,<br>
+						India.
+                    </address>
+                </div>
+
+                <!-- <div class = "footer-item">
+                    <h3 class = "footer-head">tags</h3>
+                    <ul class = "tags-list flex">
+                        <li>medical care</li>
+                        <li>emergency</li>
+                        <li>therapy</li>
+                        <li>surgery</li>
+                        <li>medication</li>
+                        <li>nurse</li>
+                    </ul>
+                </div> -->
+
+                <!-- <div class = "footer-item">
+                    <h3 class = "footer-head">Quick Links</h3>
+                    <ul>
+                        <li><a href = "#" class = "text-white">Our Services</a></li>
+                        <li><a href = "#" class = "text-white">Our Plan</a></li>
+                        <li><a href = "#" class = "text-white">Privacy Policy</a></li>
+                        <li><a href = "#" class = "text-white">Appointment Schedule</a></li>
+                    </ul>
+                </div> -->
+
+
+				<div>
+					<img src="" alt="">
+				</div>
+
+				<div>
+					<img src="" alt="">
+				</div>
+
+                <div class = "footer-item" >
+                    <h3 class = "footer-head">Wanna Connect</h3>
+                    <p class = "text text-md">Always ready for help</p>
+                    <ul class = "appointment-info">
+                        <li>5:00 PM - 8:00 PM</li>
+                        <li>
+                            <i class = "fas fa-envelope"></i>
+                            <span>ujjwalsri@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class = "fas fa-phone"></i>
+                            <span>+91 7897500168</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class = "footer-links">
+                <ul class = "flex">
+                    <li><a href = "https://www.facebook.com" class = "text-white flex"> <i class = "fab fa-facebook-f"></i></a></li>
+                    <li><a href = "https://twitter.com" class = "text-white flex"> <i class = "fab fa-twitter"></i></a></li>
+                    <li><a href = "https://www.instagram.com/?hl=en" class = "text-white flex"> <i class = "fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer  -->
+
+
+    <!-- custom js -->
+    <script src = "js/script.js"></script>
 </body>
 </html>
